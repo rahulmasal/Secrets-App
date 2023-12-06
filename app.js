@@ -34,7 +34,7 @@ app.use(passport.session());
 
 
 
-mongoose.connect('mongodb://localhost:27017/userDB');
+mongoose.connect(process.env.MONGO_CONNECTION_STRING).then(() => console.log("Database Connection succeed"));
 
 // mongoose.set('useCreateIndex', true);
 
